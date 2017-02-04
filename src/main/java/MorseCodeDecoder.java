@@ -1,3 +1,5 @@
+/* https://www.codewars.com/kata/decode-the-morse-code/train/java */
+
 public class MorseCodeDecoder {
     public static void main(String[] args) {
         String s = "   .";
