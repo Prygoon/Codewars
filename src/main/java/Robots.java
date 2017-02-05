@@ -15,13 +15,12 @@ public class Robots {
 
     //My first Regex experience
     public static String[] countRobots(String[] a) {
-        Pattern robot = Pattern.compile("[a-zA-Z][|};&#\\[\\]/><()*]{2}0[|};&#\\[\\]/><()*]{2}0[|};&#\\[\\]/><()*]{2}[a-zA-Z]");//code here
+        Pattern robot = Pattern.compile("[a-z]([|};&#\\[\\]/><()*]{2}0){2}[|};&#\\[\\]/><()*]{2}[a-z]", CASE_INSENSITIVE);//code here
         Pattern functioning = Pattern.compile(".*automatik.*", CASE_INSENSITIVE);
         Pattern dancing = Pattern.compile(".*mechanik.*", CASE_INSENSITIVE);
 
         int dancingRobotCounter = 0;
         int functioningRobotCounter = 0;
-
         for (String str : a) {
 
             Matcher robotSearcher = robot.matcher(str);
